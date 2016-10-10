@@ -1,0 +1,24 @@
+title: simple single-cycle mips
+description: 
+url: https://github.com/matthijsbos/simple-mips-fpgaedu
+vhdlFiles: 
+    - ./src/mips/rtl/alu.vhd
+    - ./src/mips/rtl/alu_control.vhd
+    - ./src/mips/rtl/alu_pack.vhd
+    - ./src/mips/rtl/comp_pack.vhd
+    - ./src/mips/rtl/control_pack.vhd
+    - ./src/mips/rtl/control_unit.vhd
+    - ./src/mips/rtl/core_pack.vhd
+    - ./src/mips/rtl/glue-logic/adder.vhd
+    - ./src/mips/rtl/glue-logic/jump_combiner.vhd
+    - ./src/mips/rtl/glue-logic/left_shifter.vhd
+    - ./src/mips/rtl/glue-logic/mux_2port.vhd
+    - ./src/mips/rtl/glue-logic/sign_extender.vhd
+    - ./src/mips/rtl/glue_pack.vhd
+    - ./src/mips/rtl/instruction_decoder.vhd
+    - ./src/mips/rtl/mips.vhd
+    - ./src/mips/rtl/register.vhd
+    - ./src/mips/rtl/register_bank.vhd
+    - ./src/mips/toplevel.vhd
+topLevelFile: ./src/mips/toplevel.vhd
+    
