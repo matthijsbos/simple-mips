@@ -8,13 +8,9 @@ use work.mips_ram;
 use work.mips_rom;
 
 entity toplevel is
-  generic (
-    init_file         : string := "../../../src/mips/romdata.hex"
-  );
   port (
-    rst_i             : in  std_logic;
-    ck_i              : in  std_logic;
-    mem_ck_i          : in  std_logic
+    reset             : in  std_logic;
+    clk               : in  std_logic;
   );
 end toplevel;
 

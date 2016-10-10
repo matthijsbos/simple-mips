@@ -10,16 +10,37 @@ use work.glue_pack.all;
 
 entity mips is
   port (
-    rst_i             : in  std_logic;
-    ck_i              : in  std_logic;
-    instr_rdata_i     : in  dw_t;
-    data_rdata_i      : in  dw_t;
+    rst_i               : in  std_logic;
+    ck_i                : in  std_logic;
 
-    data_w_en_o       : out std_logic;
-    data_r_en_o       : out std_logic;
-    data_wdata_o      : out dw_t;
-    data_addr_o       : out dw_t;
-    instr_addr_o      : out dw_t
+    instr_r_data_i      : in  dw_t;
+    instr_addr_o        : out dw_t
+    instr_r_en_o        : out std_logic;
+    instr_clk_o         : out std_logic;
+    instr_reset_o       : out std_logic;
+
+    data_r_data_i       : in  dw_t;
+    data_w_en_o         : out std_logic;
+    data_r_en_o         : out std_logic;
+    data_w_data_o       : out dw_t;
+    data_addr_o         : out dw_t;
+    data_clk_o          : out std_logic;
+    data_reset_o        : out std_logic;
+
+    pc_r_data_i         : in  dw_t;
+    pc_w_data_o         : out dw_t;
+    pc_w_en_o:          : out std_logic;
+    pc_clk_o:           : out std_logic;
+
+    reg_rs_o            : out reg_id_t;
+    reg_rt_o            : out reg_id_t;
+    reg_rw_o            : out reg_id_t;
+    reg_w_data_o        : out dw_t;
+    reg_w_en_o          : out std_logic;
+    reg_r_data_0_i      : in dw_t;
+    reg_r_data_1_i      : in dw_t;
+    reg_reset_o:        : out std_logic;
+    reg_clk_o:          : out std_logic;
   );
 end mips;
 
@@ -42,7 +63,6 @@ architecture structural of mips is
 
   -- PC
   signal pc_d        : dw_t; -- PC in
-  signal pc_q        : dw_t; -- PC out
   signal pc_p4       : dw_t; -- PC + 4
   signal pc_branch   : dw_t; -- PC + immed_sl2 (for branching)
   signal pc_nojump   : dw_t; -- Target addr after branch_mux
@@ -61,8 +81,6 @@ architecture structural of mips is
   signal alucontrol  : instruction_t;
 
   -- Register bank
-  signal reg_q0      : dw_t; -- Port 0 output
-  signal reg_q1      : dw_t; -- Port 1 output
   signal reg_w_data  : dw_t; -- Write data
 
   -- ALU
@@ -119,7 +137,7 @@ begin
       bus_width_g => dw_t'length
     )
     port map (
-      d0_i  => reg_q1,
+      d0_i  => reg_r_data_1_i,
       d1_i  => immed_ext,
       sel_i => alu_src,
 
@@ -143,7 +161,7 @@ begin
 --------------------------------------------------------------------------------
   instr_dec: intruction_decoder
     port map (
-      instr_i => instr_rdata_i,
+      instr_i => instr_r_data_i,
       op_o    => op,
       rs_o    => rs,
       rt_o    => rt,
@@ -156,34 +174,34 @@ begin
 --------------------------------------------------------------------------------
 -- Registers
 --------------------------------------------------------------------------------
-  the_pc: reg_g
-    generic map (
-      nbits_g => dw_t'length
-    )
-    port map (
-      d_i     => pc_d,
-      ck_i    => ck_i,
-      rst_i   => rst_i,
-      wr_en_i => '1',
-      q_o     => pc_q
-    );
-
-  reg_bank: reg_bank_3port
-    generic map (
-      sel_bits_g => 5
-    )
-    port map (
-       r0_sel => rs,
-       r1_sel => rt,
-       rw_sel => rw_sel,
-       d_i    => reg_w_data,
-       we_i   => reg_wr,
-       ck_i   => ck_i,
-       rst_i  => rst_i,
-
-       q0_o   => reg_q0,
-       q1_o   => reg_q1
-  );
+--  the_pc: reg_g
+--    generic map (
+--      nbits_g => dw_t'length
+--    )
+--    port map (
+--      d_i     => pc_d,
+--      ck_i    => ck_i,
+--      rst_i   => rst_i,
+--      wr_en_i => '1',
+--      q_o     => pc_q
+--    );
+--
+--  reg_bank: reg_bank_3port
+--    generic map (
+--      sel_bits_g => 5
+--    )
+--    port map (
+--       r0_sel => rs,
+--       r1_sel => rt,
+--       rw_sel => rw_sel,
+--       d_i    => reg_w_data,
+--       we_i   => reg_wr,
+--       ck_i   => ck_i,
+--       rst_i  => rst_i,
+--
+--       q0_o   => reg_q0,
+--       q1_o   => reg_q1
+--  );
 
 --------------------------------------------------------------------------------
 -- ALU
@@ -198,7 +216,7 @@ begin
 
   the_alu: alu
     port map (
-      op1_i  => reg_q0,
+      op1_i  => reg_r_data_0_i,
       op2_i  => alu_oper2,
       func_i => aluop,
 
@@ -229,7 +247,7 @@ begin
       bus_width_g => dw_t'length
     )
     port map (
-      d1_i => pc_q,
+      d1_i => pc_r_data_i,
       d2_i => std_logic_vector(to_unsigned(4, dw_t'length)),
 
       q_o  => pc_p4
@@ -269,19 +287,41 @@ begin
 
   jump_comb: jump_combiner
     port map (
-      pc_i            => pc_q,
+      pc_i            => pc_r_data_i,
       targ_addr_i     => j_targ, 
 
       addr_o          => pc_jump
     );
 
+
+  branch_mux_sel <= branch and zf;
+
 --------------------------------------------------------------------------------
 -- Output signals
 --------------------------------------------------------------------------------
+
+  instr_addr_o <= pc_r_data_i;
+  instr_r_en_o <= '1'
+  instr_clk_o <= ck_i
+  instr_reset_o <= '0'
+
   data_w_en_o  <= mem_wr;
   data_r_en_o  <= mem_r;
   data_addr_o  <= alu_res;
-  data_wdata_o <= reg_q1;
-  instr_addr_o <= pc_q;
-  branch_mux_sel <= branch and zf;
+  data_w_data_o <= reg_r_data_1_i;
+  data_clk_o <= ck_i;
+  data_reset_o <= '0'
+
+  pc_w_data_o <= pc_d;
+  pc_w_en_o <= '1';
+  pc_clk_o <= ck_i;
+
+  reg_rs_o <= rs;
+  reg_rt_o <= rt;
+  reg_rw_o <= rw_sel;
+  reg_w_data_o <= reg_w_data;
+  reg_w_en_o <= reg_wr;
+  reg_reset_o <= rst_i;
+  reg_clk_o <= ck_i;
+
 end architecture;
