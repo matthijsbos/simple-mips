@@ -1,0 +1,128 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
+| Date         : Tue Oct 25 09:49:05 2016
+| Host         : ThinkPad-Twist-Ubuntu running 64-bit Ubuntu 16.04.1 LTS
+| Command      : report_control_sets -verbose -file compose_control_sets_placed.rpt
+| Design       : compose
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    75 |
+| Minimum Number of register sites lost to control set restrictions |    98 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             186 |           86 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            1056 |          471 |
+| Yes          | Yes                   | No                     |             380 |          169 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                          Enable Signal                         |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count |
++----------------+----------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[29][31][0] | nexys4_inst/registers_reg[26][4][1]                                  |                1 |              1 |
+| ~clk_IBUF_BUFG |                                                                |                                                                      |                2 |              2 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[23][31][0] | nexys4_inst/registers_reg[23][1][1]                                  |                1 |              2 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[26][31][0] | nexys4_inst/registers_reg[18][7][1]                                  |                4 |              4 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_byte_count_reg[3]_i_1_n_0    | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | nexys4_inst/component_tx_transmitter_byte_count_next           | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_count_next[3]_i_1_n_0         | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              4 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[67]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              4 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[15][31][0] | nexys4_inst/registers_reg[23][1][0]                                  |                2 |              5 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[18][31][0] | nexys4_inst/registers_reg[18][7][0]                                  |                3 |              7 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[8]_10                     | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[7]_i_1_n_0       | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                5 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[63]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                5 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[55]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                4 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[47]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[39]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[31]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                6 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[23]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                5 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_receiver_message_reg[15]_i_1_n_0      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                7 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[9]_5                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                4 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[7]_1                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[6]_7                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[5]_4                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[4]_9                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[3]_0                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[2]_6                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                4 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[1]_3                      | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[11]_2                     | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                2 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[10]_8                     | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_rx_fifo_rx_mem[0][7]_i_1_n_0             | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                4 |              8 |
+|  clk_IBUF_BUFG | nexys4_inst/component_tx_uart_tx_data_reg[7]_i_1_n_0           | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |                3 |              8 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[7][31][0]  | nexys4_inst/AR[1]                                                    |                5 |              8 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[10][31][0] | nexys4_inst/registers_reg[2][13][0]                                  |                4 |             10 |
+|  clk_IBUF_BUFG | nexys4_inst/E[0]                                               | nexys4_inst/AR[0]                                                    |                9 |             11 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[2][31][0]  | nexys4_inst/registers_reg[0][0]                                      |                8 |             13 |
+|  clk_IBUF_BUFG |                                                                |                                                                      |               10 |             14 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[2][31][0]  | nexys4_inst/registers_reg[2][13][0]                                  |               10 |             19 |
+|  clk_IBUF_BUFG | nexys4_inst/E[0]                                               | nexys4_inst/AR[1]                                                    |               15 |             21 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[10][31][0] | nexys4_inst/registers_reg[18][7][0]                                  |               10 |             22 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[7][31][0]  | nexys4_inst/registers_reg[23][1][0]                                  |               10 |             24 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[18][31][0] | nexys4_inst/registers_reg[18][7][1]                                  |               12 |             25 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[15][31][0] | nexys4_inst/registers_reg[23][1][1]                                  |               14 |             27 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[26][31][0] | nexys4_inst/registers_reg[26][4][1]                                  |               12 |             28 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[23][31][0] | nexys4_inst/registers_reg[26][4][0]                                  |               12 |             30 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[29][31][0] | nexys4_inst/registers_reg[26][4][0]                                  |               13 |             31 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[9][31][0]  | nexys4_inst/registers_reg[23][1][0]                                  |               12 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[14][31][0] | nexys4_inst/registers_reg[18][7][0]                                  |               19 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[13][31][0] | nexys4_inst/registers_reg[23][1][0]                                  |               18 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[12][31][0] | nexys4_inst/registers_reg[18][7][0]                                  |               14 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[11][31][0] | nexys4_inst/registers_reg[23][1][0]                                  |               14 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[0][31][0]  | nexys4_inst/registers_reg[0][0]                                      |               13 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[16][31][0] | nexys4_inst/registers_reg[18][7][0]                                  |               14 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[8][31][0]  | nexys4_inst/registers_reg[2][13][0]                                  |               14 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[6][31][0]  | nexys4_inst/registers_reg[2][13][0]                                  |               12 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[5][31][0]  | nexys4_inst/AR[1]                                                    |               13 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[4][31][0]  | nexys4_inst/registers_reg[2][13][0]                                  |               15 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[3][31][0]  | nexys4_inst/AR[1]                                                    |               11 |             32 |
+|  clk_IBUF_BUFG |                                                                | nexys4_inst/dout_reg[0]_1                                            |               29 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[17][31][0] | nexys4_inst/registers_reg[23][1][1]                                  |               15 |             32 |
+|  clk_IBUF_BUFG | nexys4_inst/dout_reg[31]_1[0]                                  | nexys4_inst/SR[0]                                                    |               19 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[19][31][0] | nexys4_inst/registers_reg[23][1][1]                                  |               13 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[1][31][0]  | nexys4_inst/AR[1]                                                    |               19 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[20][31][0] | nexys4_inst/registers_reg[18][7][1]                                  |               10 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[21][31][0] | nexys4_inst/registers_reg[23][1][1]                                  |               13 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[22][31][0] | nexys4_inst/registers_reg[18][7][1]                                  |               12 |             32 |
+|  clk_IBUF_BUFG | nexys4_inst/dout_reg[31]_1[0]                                  | nexys4_inst/dout_reg[0]_2[0]                                         |               21 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[30][31][0] | nexys4_inst/registers_reg[26][4][1]                                  |               13 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[24][31][0] | nexys4_inst/registers_reg[18][7][1]                                  |               14 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[25][31][0] | nexys4_inst/registers_reg[26][4][0]                                  |               10 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/E[0]                     | nexys4_inst/registers_reg[26][4][1]                                  |               15 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[27][31][0] | nexys4_inst/registers_reg[26][4][0]                                  |               11 |             32 |
+|  clk_IBUF_BUFG | wrapper_inst/mmap_mips_instr_mem_inst/registers_reg[28][31][0] | nexys4_inst/registers_reg[26][4][1]                                  |               12 |             32 |
+| ~clk_IBUF_BUFG | nexys4_inst/controller_cycle_control_exp_clk_en_next           | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |               16 |             64 |
+|  clk_IBUF_BUFG | nexys4_inst/component_tx_transmitter_message_reg[67]_i_1_n_0   | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |               34 |             68 |
+|  clk_IBUF_BUFG |                                                                | nexys4_inst/FSM_sequential_component_rx_uart_rx_state_reg[1]_i_1_n_0 |               57 |            154 |
++----------------+----------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+
+
