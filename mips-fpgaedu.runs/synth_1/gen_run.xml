@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1477381560">
-  <File Type="VDS-TIMING-PB" Name="compose_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1481286987">
+  <File Type="PA-TCL" Name="compose.tcl"/>
+  <File Type="RDS-RDS" Name="compose.vds"/>
   <File Type="VDS-TIMINGSUMMARY" Name="compose_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="compose_timing_summary_synth.pb"/>
   <File Type="RDS-DCP" Name="compose.dcp"/>
   <File Type="RDS-UTIL-PB" Name="compose_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="compose_utilization_synth.rpt"/>
   <File Type="RDS-PROPCONSTRS" Name="compose_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="compose.vds"/>
-  <File Type="PA-TCL" Name="compose.tcl"/>
-  <File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
-  <File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
-  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/core_pack.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/core_pack.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/core_pack.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -23,7 +20,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/control_pack.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/control_pack.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/control_pack.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -31,7 +28,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu_pack.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu_pack.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu_pack.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -40,7 +37,7 @@
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/register.vhd">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/register.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/register.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,7 +45,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/comp_pack.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/comp_pack.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/comp_pack.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -56,7 +53,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/sign_extender.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/sign_extender.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/sign_extender.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -66,7 +63,7 @@
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/register_bank.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/register_bank.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -74,7 +71,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/board-component-sources/pck_myhdl_090.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Informatica/Afstuderen/board-component-sources/pck_myhdl_090.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Informatica/Afstuderen/board-component-sources/pck_myhdl_090.vhd"/>
         <Attr Name="ImportTime" Val="1470994925"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -82,7 +79,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/mux_2port.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/mux_2port.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/mux_2port.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -90,7 +87,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/left_shifter.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/left_shifter.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/left_shifter.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -98,7 +95,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/jump_combiner.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/jump_combiner.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/jump_combiner.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -106,7 +103,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/instruction_decoder.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/instruction_decoder.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/instruction_decoder.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -114,7 +111,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue_pack.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue_pack.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue_pack.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -122,7 +119,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/control_unit.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/control_unit.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/control_unit.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -130,7 +127,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu_control.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu_control.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu_control.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -138,7 +135,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -146,7 +143,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/adder.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/adder.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/adder.vhd"/>
         <Attr Name="ImportTime" Val="1476096371"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -161,7 +158,7 @@
     <File Path="$PSRCDIR/sources_1/imports/mips/split.vhd">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/split.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/split.vhd"/>
         <Attr Name="ImportTime" Val="1476800424"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -169,7 +166,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/mips/rtl/mips.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/mips.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/mips.vhd"/>
         <Attr Name="ImportTime" Val="1476125510"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -184,7 +181,7 @@
     <File Path="$PSRCDIR/sources_1/imports/mips/toplevel.vhd">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/toplevel.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/src/mips/toplevel.vhd"/>
         <Attr Name="ImportTime" Val="1476125510"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -193,7 +190,7 @@
     <File Path="$PSRCDIR/sources_1/imports/tmp/pck_myhdl_090.vhd">
       <FileInfo>
         <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../tmp/pck_myhdl_090.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../tmp/pck_myhdl_090.vhd"/>
         <Attr Name="ImportTime" Val="1476885490"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -208,7 +205,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/tmp/nexys4.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../tmp/nexys4.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../tmp/nexys4.vhd"/>
         <Attr Name="ImportTime" Val="1477246245"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -266,7 +263,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/Downloads/Nexys4_Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../Informatica/Afstuderen/nexys4_test_setup/nexys4_test_setup.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Informatica/Afstuderen/nexys4_test_setup/nexys4_test_setup.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc"/>
         <Attr Name="ImportTime" Val="1460901993"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -280,6 +277,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="instr_mem"/>
   <BlockFileSet Type="BlockSrcs" Name="data_mem"/>
+  <BlockFileSet Type="BlockSrcs" Name="instr_mem"/>
 </GenRun>

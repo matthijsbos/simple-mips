@@ -46,13 +46,16 @@ set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
 start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint compose_routed.dcp
-  set_property webtalk.parent_dir /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.cache/wt [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force compose.mmi }
-  write_bitstream -force compose.bit 
+  write_bitstream -force -no_partial_bitfile compose.bit 
   catch { write_sysdef -hwdef compose.hwdef -bitfile compose.bit -meminfo compose.mmi -file compose.sysdef }
+  catch {write_debug_probes -quiet -force debug_nets}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
@@ -60,5 +63,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step write_bitstream
+  unset ACTIVE_STEP 
 }
 

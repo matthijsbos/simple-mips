@@ -2,8 +2,8 @@
 # Vivado v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Fri Dec  9 13:48:55 2016
-# Process ID: 20272
+# Start of session at: Fri Dec  9 13:39:42 2016
+# Process ID: 17258
 # Current directory: /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.runs/impl_1
 # Command line: vivado -log compose.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source compose.tcl -notrace
 # Log file: /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.runs/impl_1/compose.vdi

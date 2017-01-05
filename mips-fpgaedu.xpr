@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2015.4 (64-bit)              -->
+<!-- Product Version: Vivado v2016.3 (64-bit)              -->
 <!--                                                         -->
-<!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="10" Path="/home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.xpr">
+<Project Version="7" Minor="17" Path="/home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="fbb628cf04a44c1688a22fac34f32928"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
     <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
@@ -20,18 +21,39 @@
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPCachePermission" Val="disable"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PPRDIR/mips-fpgaedu.ip_user_files"/>
     <Option Name="IPStaticSourceDir" Val="$PPRDIR/mips-fpgaedu.ip_user_files/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSANumComputeUnits" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="0"/>
+    <Option Name="WTModelSimExportSim" Val="0"/>
+    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="0"/>
+    <Option Name="WTRivieraExportSim" Val="0"/>
+    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="64"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
   </Configuration>
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/core_pack.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/core_pack.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/core_pack.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -39,7 +61,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/control_pack.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/control_pack.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/control_pack.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -47,7 +69,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu_pack.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu_pack.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu_pack.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -56,7 +78,7 @@
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/register.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/register.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/register.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -64,7 +86,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/comp_pack.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/comp_pack.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/comp_pack.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -72,7 +94,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/sign_extender.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/sign_extender.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/sign_extender.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -82,7 +104,7 @@
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/register_bank.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/register_bank.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -90,7 +112,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/board-component-sources/pck_myhdl_090.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Informatica/Afstuderen/board-component-sources/pck_myhdl_090.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Informatica/Afstuderen/board-component-sources/pck_myhdl_090.vhd"/>
           <Attr Name="ImportTime" Val="1470994925"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -98,7 +120,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/mux_2port.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/mux_2port.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/mux_2port.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -106,7 +128,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/left_shifter.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/left_shifter.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/left_shifter.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -114,7 +136,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/jump_combiner.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/jump_combiner.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/jump_combiner.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -122,7 +144,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/instruction_decoder.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/instruction_decoder.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/instruction_decoder.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -130,7 +152,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue_pack.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue_pack.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue_pack.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -138,7 +160,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/control_unit.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/control_unit.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/control_unit.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -146,7 +168,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu_control.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu_control.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu_control.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -154,7 +176,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/alu.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/alu.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/alu.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -162,7 +184,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/glue-logic/adder.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/glue-logic/adder.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/glue-logic/adder.vhd"/>
           <Attr Name="ImportTime" Val="1476096371"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -177,7 +199,7 @@
       <File Path="$PSRCDIR/sources_1/imports/mips/split.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/split.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/split.vhd"/>
           <Attr Name="ImportTime" Val="1476800424"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -185,7 +207,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/mips/rtl/mips.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/rtl/mips.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/rtl/mips.vhd"/>
           <Attr Name="ImportTime" Val="1476125510"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -200,7 +222,7 @@
       <File Path="$PSRCDIR/sources_1/imports/mips/toplevel.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../simple-mips-fpgaedu/src/mips/toplevel.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/src/mips/toplevel.vhd"/>
           <Attr Name="ImportTime" Val="1476125510"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -209,7 +231,7 @@
       <File Path="$PSRCDIR/sources_1/imports/tmp/pck_myhdl_090.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../tmp/pck_myhdl_090.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../tmp/pck_myhdl_090.vhd"/>
           <Attr Name="ImportTime" Val="1476885490"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -224,7 +246,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/tmp/nexys4.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../tmp/nexys4.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../tmp/nexys4.vhd"/>
           <Attr Name="ImportTime" Val="1477246245"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -282,7 +304,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/Downloads/Nexys4_Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Informatica/Afstuderen/nexys4_test_setup/nexys4_test_setup.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../Informatica/Afstuderen/nexys4_test_setup/nexys4_test_setup.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc"/>
           <Attr Name="ImportTime" Val="1460901993"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -299,6 +321,8 @@
         <Option Name="TopModule" Val="mips"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SimMode" Val="post-implementation"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
@@ -358,6 +382,7 @@
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="data_mem_synth_1" Type="Ft3:Synth" SrcSet="data_mem" Part="xc7a100tcsg324-1" ConstrsSet="data_mem" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/data_mem_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
@@ -365,6 +390,7 @@
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="instr_mem_synth_1" Type="Ft3:Synth" SrcSet="instr_mem" Part="xc7a100tcsg324-1" ConstrsSet="instr_mem" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/instr_mem_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
@@ -372,6 +398,7 @@
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
@@ -387,6 +414,7 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="data_mem_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="data_mem" Description="Vivado Implementation Defaults" SynthRun="data_mem_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
@@ -401,6 +429,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="instr_mem_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="instr_mem" Description="Vivado Implementation Defaults" SynthRun="instr_mem_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
@@ -415,6 +444,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
   </Runs>
 </Project>

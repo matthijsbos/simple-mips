@@ -6,47 +6,56 @@ set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-1
 
+set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.cache/wt [current_project]
-set_property parent.project_path /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.xpr [current_project]
+set_property webtalk.parent_dir /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.cache/wt [current_project]
+set_property parent.project_path /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property vhdl_version vhdl_2k [current_fileset]
-add_files -quiet /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/data_mem_synth_1/data_mem.dcp
-set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/data_mem_synth_1/data_mem.dcp]
-add_files -quiet /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/instr_mem_synth_1/instr_mem.dcp
-set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/instr_mem_synth_1/instr_mem.dcp]
+set_property ip_cache_permissions disable [current_project]
+add_files -quiet /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/ip/data_mem/data_mem.dcp
+set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/ip/data_mem/data_mem.dcp]
+add_files -quiet /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/ip/instr_mem/instr_mem.dcp
+set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/ip/instr_mem/instr_mem.dcp]
 read_vhdl -library xil_defaultlib {
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/core_pack.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/control_pack.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu_pack.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/comp_pack.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/sign_extender.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/board-component-sources/pck_myhdl_090.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/mux_2port.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/left_shifter.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/jump_combiner.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/instruction_decoder.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue_pack.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/control_unit.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu_control.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/adder.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/wrapper.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/mips.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/compose.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/tmp/nexys4.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_register_file.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_signal_wrapper.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_pc_register.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_split.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_instr_mem.vhd
-  /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_data_mem.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/core_pack.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/control_pack.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu_pack.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/comp_pack.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/sign_extender.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/board-component-sources/pck_myhdl_090.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/mux_2port.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/left_shifter.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/jump_combiner.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/instruction_decoder.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue_pack.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/control_unit.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu_control.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/alu.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/glue-logic/adder.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/wrapper.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/mips/rtl/mips.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/compose.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/imports/tmp/nexys4.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_register_file.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_signal_wrapper.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_pc_register.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_split.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_instr_mem.vhd
+  /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/sources_1/new/mmap_mips_data_mem.vhd
 }
-read_xdc /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc
-set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc]
+foreach dcp [get_files -quiet -all *.dcp] {
+  set_property used_in_implementation false $dcp
+}
+read_xdc /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc
+set_property used_in_implementation false [get_files /home/matthijsbos/Dropbox/fpgaedu/matthijsbos/simple-mips-fpgaedu/mips-fpgaedu.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc]
+
 
 synth_design -top compose -part xc7a100tcsg324-1
-write_checkpoint -noxdef compose.dcp
+
+
+write_checkpoint -force -noxdef compose.dcp
+
 catch { report_utilization -file compose_utilization_synth.rpt -pb compose_utilization_synth.pb }

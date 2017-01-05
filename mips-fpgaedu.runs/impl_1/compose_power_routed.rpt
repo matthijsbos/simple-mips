@@ -1,16 +1,16 @@
-Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
-----------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date             : Tue Oct 25 10:02:01 2016
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
+| Date             : Fri Dec  9 13:46:16 2016
 | Host             : ThinkPad-Twist-Ubuntu running 64-bit Ubuntu 16.04.1 LTS
-| Command          : 
+| Command          : report_power -file compose_power_routed.rpt -pb compose_power_summary_routed.pb -rpx compose_power_routed.rpx
 | Design           : compose
 | Device           : xc7a100tcsg324-1
 | Design State     : routed
 | Grade            : commercial
 | Process          : typical
 | Characterization : Production
-----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 Power Report
 
@@ -31,7 +31,7 @@ Table of Contents
 
 +--------------------------+--------+
 | Total On-Chip Power (W)  | 0.123  |
-| Dynamic (W)              | 0.026  |
+| Dynamic (W)              | 0.025  |
 | Device Static (W)        | 0.097  |
 | Effective TJA (C/W)      | 4.6    |
 | Max Ambient (C)          | 84.4   |
@@ -50,13 +50,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.006 |        3 |       --- |             --- |
-| Slice Logic    |     0.005 |     5106 |       --- |             --- |
-|   LUT as Logic |     0.005 |     2626 |     63400 |            4.14 |
+| Slice Logic    |     0.005 |     4953 |       --- |             --- |
+|   LUT as Logic |     0.005 |     2546 |     63400 |            4.02 |
 |   CARRY4       |    <0.001 |      154 |     15850 |            0.97 |
-|   Register     |    <0.001 |     1638 |    126800 |            1.29 |
-|   F7/F8 Muxes  |    <0.001 |      423 |     63400 |            0.67 |
-|   Others       |     0.000 |       25 |       --- |             --- |
-| Signals        |     0.009 |     3851 |       --- |             --- |
+|   Register     |    <0.001 |     1636 |    126800 |            1.29 |
+|   F7/F8 Muxes  |    <0.001 |      408 |     63400 |            0.64 |
+|   Others       |     0.000 |       24 |       --- |             --- |
+| Signals        |     0.009 |     3730 |       --- |             --- |
 | Block RAM      |     0.004 |        2 |       135 |            1.48 |
 | I/O            |    <0.001 |        4 |       210 |            1.90 |
 | Static Power   |     0.097 |          |           |                 |
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.040 |       0.025 |      0.015 |
+| Vccint    |       1.000 |     0.039 |       0.024 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -139,9 +139,13 @@ Table of Contents
 +-------------------------------------------+-----------+
 | Name                                      | Power (W) |
 +-------------------------------------------+-----------+
-| compose                                   |     0.026 |
+| compose                                   |     0.025 |
 |   nexys4_inst                             |     0.005 |
 |   wrapper_inst                            |     0.020 |
+|     mips_inst                             |    <0.001 |
+|       branch_adder                        |    <0.001 |
+|       pc_adder                            |    <0.001 |
+|       the_alu                             |    <0.001 |
 |     mmap_mips_data_mem_inst               |    <0.001 |
 |       data_mem_inst                       |    <0.001 |
 |         U0                                |    <0.001 |
@@ -151,15 +155,15 @@ Table of Contents
 |                 ramloop[0].ram.r          |    <0.001 |
 |                   prim_init.ram           |    <0.001 |
 |     mmap_mips_instr_mem_inst              |     0.012 |
-|       instr_mem_inst                      |     0.008 |
-|         U0                                |     0.008 |
-|           inst_blk_mem_gen                |     0.008 |
-|             gnativebmg.native_blk_mem_gen |     0.008 |
-|               valid.cstr                  |     0.008 |
-|                 ramloop[0].ram.r          |     0.008 |
-|                   prim_init.ram           |     0.008 |
+|       instr_mem_inst                      |     0.009 |
+|         U0                                |     0.009 |
+|           inst_blk_mem_gen                |     0.009 |
+|             gnativebmg.native_blk_mem_gen |     0.009 |
+|               valid.cstr                  |     0.009 |
+|                 ramloop[0].ram.r          |     0.009 |
+|                   prim_init.ram           |     0.009 |
 |     mmap_mips_pc_register_inst            |    <0.001 |
-|     mmap_mips_register_file_inst          |     0.006 |
+|     mmap_mips_register_file_inst          |     0.005 |
 |     mmap_mips_signal_wrapper_inst         |    <0.001 |
 |     mmap_split_inst_0                     |    <0.001 |
 |     mmap_split_inst_1                     |    <0.001 |

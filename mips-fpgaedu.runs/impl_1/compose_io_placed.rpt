@@ -1,7 +1,7 @@
-Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2015.4 (lin64) Build 1412921 Wed Nov 18 09:44:32 MST 2015
-| Date         : Tue Oct 25 09:49:04 2016
+| Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
+| Date         : Fri Dec  9 13:41:51 2016
 | Host         : ThinkPad-Twist-Ubuntu running 64-bit Ubuntu 16.04.1 LTS
 | Command      : report_io -file compose_io_placed.rpt
 | Design       : compose
