@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="data_mem_synth_1" LaunchDir="/home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/data_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="instr_mem_synth_1" LaunchDir="/home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/instr_mem_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="data_mem_synth_1"/>
+		<Parent Id="instr_mem_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/matthijsbos/Dropbox/fpgaedu/mips-fpgaedu/mips-fpgaedu.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+	</Run>
+</Runs>
+
